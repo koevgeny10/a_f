@@ -1,0 +1,845 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-07 21:32+0300\n"
+"PO-Revision-Date: 2018-05-13 16:50+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Generator: Poedit 1.8.2\n"
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:6
+#: .\diagnostics\templates\diagnostics\diagnostics.html:18
+#: .\templates\base_home.html:64 .\templates\base_home.html:67
+msgid "Diagnostic"
+msgstr "Діагностика"
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:19
+msgid "Upload files"
+msgstr "Завантажити файли"
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:20
+msgid "Reports"
+msgstr "Звіт"
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:59
+#: .\diagnostics\templates\diagnostics\diagnostics.html:67
+#: .\main\templates\index\about_user.html:142
+#: .\main\templates\index\about_user.html:151
+#: .\main\templates\index\about_user.html:160
+#: .\main\templates\index\profile.html:161 .\templates\base_home.html:275
+#: .\templates\base_home.html:322
+msgid "Save"
+msgstr "Зберегти"
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:73
+msgid "Load reports"
+msgstr "Завантажити звіт"
+
+#: .\main\context_processors.py:70
+msgid "Your password has been successfully changed."
+msgstr "Ваш пароль був успішно змінений."
+
+#: .\main\context_processors.py:72 .\main\context_processors.py:86
+#: .\main\views.py:196 .\main\views.py:386 .\main\views.py:458
+msgid "Sorry, try again."
+msgstr "Вибачте, спробуйте ще раз."
+
+#: .\main\context_processors.py:84
+msgid "Your settings have been successfully changed."
+msgstr "Ваші налаштування були успішно змінені"
+
+#: .\main\context_processors.py:95
+msgid "Alternative email"
+msgstr "Альтернативна поштова скринька"
+
+#: .\main\context_processors.py:109 .\main\context_processors.py:142
+msgid "Check your verification code "
+msgstr "Перевірте свій код підтвердження "
+
+#: .\main\context_processors.py:111
+msgid "Enter another email."
+msgstr "Введіть іншу електронну скриньку"
+
+#: .\main\context_processors.py:113
+msgid "You cannot enter this email."
+msgstr "Ви не можете ввести цю електронну скриньку."
+
+#: .\main\context_processors.py:119
+msgid "Done!"
+msgstr "Готово!"
+
+#: .\main\context_processors.py:126
+msgid "Wrong links."
+msgstr "Невірні посилання"
+
+#: .\main\context_processors.py:130
+msgid "Confirmation email"
+msgstr "Підтвердження електронної пошти"
+
+#: .\main\context_processors.py:149
+msgid "This user already exists."
+msgstr "Такий користувач вже існує"
+
+#: .\main\context_processors.py:155 .\templates\base_home.html:152
+#: .\templates\base_home.html:400
+msgid "Invitation"
+msgstr "Запрошення"
+
+#: .\main\context_processors.py:168
+msgid "Thank you for help!"
+msgstr "Дякуємо Вам за допомогу!"
+
+#: .\main\context_processors.py:170
+msgid "Fail."
+msgstr "Невдача."
+
+#: .\main\forms.py:21 .\main\forms.py:51 .\main\models.py:179
+#: .\main\templates\password_reset\password_reset_form.html:34
+msgid "Email"
+msgstr "Електронна пошта"
+
+#: .\main\forms.py:28 .\main\forms.py:72 .\templates\base_home.html:226
+msgid "Password"
+msgstr "Пароль"
+
+#: .\main\forms.py:58 .\main\templates\index\about_user.html:85
+#: .\main\templates\index\profile.html:38
+msgid "First name"
+msgstr "Ім'я"
+
+#: .\main\forms.py:65 .\main\templates\index\about_user.html:86
+#: .\main\templates\index\profile.html:39
+msgid "Last name"
+msgstr "Прізвище"
+
+#: .\main\forms.py:79
+msgid "Password confirmation"
+msgstr "Підтвердження паролю"
+
+#: .\main\forms.py:115
+msgid "This email is already in use."
+msgstr "Ця скринька вже використовується."
+
+#: .\main\forms.py:183
+msgid "Facebook link is not correct."
+msgstr "Facebook посилання не є правильним."
+
+#: .\main\forms.py:185
+msgid "Twitter link is not correct."
+msgstr "Twitter посилання не є правильним."
+
+#: .\main\forms.py:187
+msgid "Google+ link is not correct."
+msgstr "Google+ посилання не є правильним."
+
+#: .\main\forms.py:189
+msgid "Github link is not correct."
+msgstr "Github посилання не є правильним."
+
+#: .\main\forms.py:191
+msgid "Linkedin link is not correct."
+msgstr "LinkedIn посилання не є правильним."
+
+#: .\main\forms.py:202 .\main\models.py:184
+#: .\main\templates\index\home.html:63
+msgid "Address"
+msgstr "Адреса"
+
+#: .\main\forms.py:204
+msgid "Wrong address"
+msgstr "Невірна адреса"
+
+#: .\main\forms.py:207 .\main\models.py:185
+#: .\main\templates\index\home.html:62
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\main\forms.py:210
+msgid "User photo"
+msgstr "Фотографія користувача"
+
+#: .\main\forms.py:212
+msgid "Image files only"
+msgstr "Тільки для фотографій"
+
+#: .\main\models.py:21
+msgid "Additional settings available"
+msgstr "Додаткові налаштування доступні"
+
+#: .\main\models.py:22
+msgid "Alt email edit available"
+msgstr "Редагування альтернативного email доступне"
+
+#: .\main\models.py:23
+msgid "Font size edit available"
+msgstr "Редагування розмір шрифту доступне"
+
+#: .\main\models.py:24
+msgid "Password edit available"
+msgstr "Редагування паролю доступне"
+
+#: .\main\models.py:25
+msgid "Social links edit available"
+msgstr "Редагування посилань на соц мережі доступне"
+
+#: .\main\models.py:26
+msgid "Table buttons text available"
+msgstr "Текст біля кнопок таблиці доступний"
+
+#: .\main\models.py:28
+msgid "Active setting"
+msgstr "Активне налаштування"
+
+#: .\main\models.py:48
+msgid "Role"
+msgstr "Роль"
+
+#: .\main\models.py:66
+msgid "Club name"
+msgstr "Назва клубу"
+
+#: .\main\models.py:123
+msgid "E-mail of the invited user"
+msgstr "Електронна пошта запрошеного користувача"
+
+#: .\main\models.py:147 .\main\templates\index\about_user.html:120
+#: .\main\templates\index\profile.html:44
+msgid "About user"
+msgstr "Про користувача"
+
+#: .\main\models.py:149
+msgid "Alt email"
+msgstr "Альтернативний email"
+
+#: .\main\models.py:152 .\main\templates\index\about_user.html:87
+#: .\main\templates\index\profile.html:40
+msgid "Patronymic"
+msgstr "По батькові"
+
+#: .\main\models.py:154 .\main\templates\index\about_user.html:89
+#: .\main\templates\index\profile.html:51
+msgid "Contact email"
+msgstr "Email для зв'язку"
+
+#: .\main\models.py:155
+msgid "Main email confirmed"
+msgstr "Основний email підтверджений"
+
+#: .\main\models.py:156
+msgid "Alt email confirmed"
+msgstr "Альтернативний email підтверджений"
+
+#: .\main\models.py:164 .\main\templates\index\home.html:59
+#: .\main\templates\index\profile.html:43
+msgid "Photo"
+msgstr "Фотографія"
+
+#: .\main\models.py:171
+msgid "Test is finished"
+msgstr "Тест закінчений"
+
+#: .\main\models.py:175
+msgid "Male"
+msgstr "Чоловік"
+
+#: .\main\models.py:176
+msgid "Female"
+msgstr "Жінка"
+
+#: .\main\models.py:180
+msgid "SMS"
+msgstr "СМС"
+
+#: .\main\models.py:182 .\main\templates\index\about_user.html:90
+#: .\main\templates\index\home.html:61 .\main\templates\index\profile.html:41
+msgid "Sex"
+msgstr "Стать"
+
+#: .\main\models.py:183 .\main\templates\index\about_user.html:97
+#: .\main\templates\index\profile.html:41
+msgid "Birthday"
+msgstr "День народження"
+
+#: .\main\models.py:189
+msgid "Dispatch"
+msgstr "Відправлення"
+
+#: .\main\models.py:193
+msgid "The user agrees to provide access to personal info"
+msgstr "Користувач погоджується надавати доступ до особистої інформації"
+
+#: .\main\models.py:196 .\templates\base_home.html:377
+msgid "Text with icons"
+msgstr "Текст з піктограмою"
+
+#: .\main\models.py:197 .\templates\base_home.html:379
+msgid "Show prompts"
+msgstr "Відображати підказки"
+
+#: .\main\templates\activations\acc_active_alt_email.html:5
+#: .\main\templates\activations\acc_active_email.html:5
+#: .\main\templates\invitation\invitation_template_0.html:5
+msgid "Hi"
+msgstr "Привіт"
+
+#: .\main\templates\activations\acc_active_alt_email.html:6
+msgid "Please click on the link to confirm your alt email"
+msgstr ""
+"Будь ласка, клацніть по посиланню, щоб підтвердити вашу альтернативну "
+"електронну пошту"
+
+#: .\main\templates\activations\acc_active_email.html:6
+msgid "Please click on the link to confirm your registration"
+msgstr "Будь-ласка, натисніть на посилання, щоб підтвердити свою реєстрацію"
+
+#: .\main\templates\index\about_user.html:8
+msgid "User"
+msgstr "Користувач"
+
+#: .\main\templates\index\about_user.html:25
+msgid "About client"
+msgstr "Про клієнта"
+
+#: .\main\templates\index\about_user.html:28
+#: .\main\templates\index\profile.html:122
+msgid "Life style"
+msgstr "Стиль життя"
+
+#: .\main\templates\index\about_user.html:31
+#: .\main\templates\index\profile.html:125
+msgid "Diseases"
+msgstr "Захворювання"
+
+#: .\main\templates\index\about_user.html:34
+#: .\main\templates\index\profile.html:128
+msgid "Motivation"
+msgstr "Мотивація"
+
+#: .\main\templates\index\about_user.html:88
+#: .\main\templates\index\profile.html:48
+msgid "Phone number"
+msgstr "Телефонний номер"
+
+#: .\main\templates\index\about_user.html:94
+#: .\main\templates\index\about_user.html:103
+#: .\main\templates\index\home.html:82 .\main\templates\index\home.html:89
+#: .\main\templates\index\home.html:96
+msgid "Not specified"
+msgstr "Не вказано"
+
+#: .\main\templates\index\about_user.html:99
+#: .\main\templates\index\profile.html:45
+msgid "Address of residence"
+msgstr "Адреса проживання"
+
+#: .\main\templates\index\about_user.html:109
+msgid "New diagnostic"
+msgstr "Нова діагностика"
+
+#: .\main\templates\index\about_user.html:114
+msgid "Generate report"
+msgstr "Створити звіт"
+
+#: .\main\templates\index\home.html:6
+msgid "Home page"
+msgstr "Головна сторінка"
+
+#: .\main\templates\index\home.html:16 .\templates\base_home.html:55
+#: .\templates\base_home.html:58
+msgid "Clients"
+msgstr "Клієнти"
+
+#: .\main\templates\index\home.html:22
+msgid "User search by phone number"
+msgstr "Пошук за номером телефону"
+
+#: .\main\templates\index\home.html:29 .\main\templates\index\home.html:32
+msgid "Search"
+msgstr "Пошук "
+
+#: .\main\templates\index\home.html:35 .\main\templates\index\home.html:39
+msgid "Reset"
+msgstr "Скинути"
+
+#: .\main\templates\index\home.html:53
+msgid "Client has been found"
+msgstr "Клієнт найдений"
+
+#: .\main\templates\index\home.html:60
+msgid "Full name"
+msgstr "Прізвище, ім'я, по батькові (ПІБ)"
+
+#: .\main\templates\index\home.html:104
+msgid "Client has not been found"
+msgstr "Клієнт не найдений"
+
+#: .\main\templates\index\login.html:4 .\main\templates\index\login.html:13
+#: .\main\templates\index\login.html:25 .\templates\base.html:46
+msgid "Login"
+msgstr "Увійти"
+
+#: .\main\templates\index\login.html:22
+msgid "Remember me"
+msgstr "Запам'ятати мене"
+
+#: .\main\templates\index\login.html:23
+#: .\main\templates\password_reset\password_reset_form.html:19
+msgid "Forgot password?"
+msgstr "Забули пароль?"
+
+#: .\main\templates\index\login.html:30
+msgid "Or login with"
+msgstr "Або увійдіть за допомогою"
+
+#: .\main\templates\index\page.html:6 .\templates\base.html:52
+msgid "About"
+msgstr "Про нас"
+
+#: .\main\templates\index\page.html:10
+msgid "Lorem ipsum"
+msgstr "Панаграма"
+
+#: .\main\templates\index\page.html:11
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+msgstr ""
+"Жебракують філософи при ґанку церкви в Гадячі, ще й шатро їхнє п’яне знаємо"
+
+#: .\main\templates\index\profile.html:8
+#: .\main\templates\index\profile.html:26
+#: .\main\templates\index\profile.html:34
+msgid "Profile"
+msgstr "Профіль"
+
+#: .\main\templates\index\profile.html:27
+msgid "Questionnaire"
+msgstr "Анкета"
+
+#: .\main\templates\index\profile.html:54
+msgid "I agree to receive information"
+msgstr "Я погоджуюся отримувати інформацію"
+
+#: .\main\templates\index\profile.html:55
+msgid "I agree to provide access to personal information"
+msgstr "Я погоджуюся надати доступ до особистої інформації"
+
+#: .\main\templates\index\profile.html:56
+msgid "Update profile"
+msgstr "Оновити профіль"
+
+#: .\main\templates\index\profile.html:69
+msgid "Diagnostic graph"
+msgstr "Графік діагностики"
+
+#: .\main\templates\index\sign_up.html:6
+#: .\main\templates\index\sign_up.html:14
+#: .\main\templates\index\sign_up.html:27 .\templates\base.html:49
+msgid "Sign up"
+msgstr "Зареєструватися"
+
+#: .\main\templates\index\sign_up.html:22
+msgid "I agree with the contract of"
+msgstr "Згоден з договором"
+
+#: .\main\templates\index\sign_up.html:22
+msgid "public offer"
+msgstr "публічної оферти"
+
+#: .\main\templates\invitation\invitation_template_0.html:6
+msgid "You were invited to join our website!"
+msgstr "Вас було запрошено приєднатися до нашого сайту!"
+
+#: .\main\templates\invitation\invitation_template_0.html:8
+msgid "From user"
+msgstr "Від користувача"
+
+#: .\main\templates\password_reset\password_reset_complete.html:4
+#: .\main\views.py:194
+msgid "Success!"
+msgstr "Успіх!"
+
+#: .\main\templates\password_reset\password_reset_complete.html:14
+msgid "Your password has been set. You may go ahead and"
+msgstr "Ваш пароль був змінений. Ви можете перейти та "
+
+#: .\main\templates\password_reset\password_reset_complete.html:14
+msgid "sign in"
+msgstr "увійти"
+
+#: .\main\templates\password_reset\password_reset_complete.html:14
+msgid "now."
+msgstr "зараз."
+
+#: .\main\templates\password_reset\password_reset_confirm.html:6
+#: .\main\templates\password_reset\password_reset_done.html:6
+msgid "Password reset"
+msgstr "Скидання пароля"
+
+#: .\main\templates\password_reset\password_reset_confirm.html:20
+#: .\main\templates\password_reset\password_reset_confirm.html:34
+#: .\templates\base_home.html:221
+msgid "Change password"
+msgstr "Змінити пароль"
+
+#: .\main\templates\password_reset\password_reset_confirm.html:28
+msgid "Your password can't be too similar to your other personal information."
+msgstr ""
+"Ваш пароль не повинен бути надто схожим на вашу персональну інформацію."
+
+#: .\main\templates\password_reset\password_reset_confirm.html:29
+msgid "Your password must contain at least 8 characters."
+msgstr "Ваш пароль повинен містити принаймні 8 символів."
+
+#: .\main\templates\password_reset\password_reset_confirm.html:30
+msgid "Your password can't be a commonly used password."
+msgstr "Ваш пароль не повинен бути загальновідомим або простим."
+
+#: .\main\templates\password_reset\password_reset_confirm.html:31
+msgid "Your password can't be entirely numeric."
+msgstr "Ваш пароль не може складатися лише з цифр."
+
+#: .\main\templates\password_reset\password_reset_confirm.html:43
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used."
+msgstr ""
+"Посилання для скидання пароля було недійсним, можливо, тому що воно вже було "
+"використане."
+
+#: .\main\templates\password_reset\password_reset_confirm.html:44
+msgid "Please request a new password reset."
+msgstr "Будь ласка, подайте запит на нове скидання пароля."
+
+#: .\main\templates\password_reset\password_reset_confirm.html:48
+#: .\templates\base_home.html:451
+msgid "New password"
+msgstr "Новий пароль"
+
+#: .\main\templates\password_reset\password_reset_confirm.html:49
+#: .\templates\base_home.html:452
+msgid "New password confirmation"
+msgstr "Підтвердження нового паролю"
+
+#: .\main\templates\password_reset\password_reset_done.html:17
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered."
+msgstr ""
+"Ми надіслали нам вам інструкції щодо налаштування пароля, якщо існує "
+"обліковий запис із введенною вами електронною поштою."
+
+#: .\main\templates\password_reset\password_reset_done.html:18
+msgid "You should receive them shortly."
+msgstr "Ви повинні отримати їх незабаром."
+
+#: .\main\templates\password_reset\password_reset_done.html:21
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"Якщо ви не отримали електронний лист, переконайтеся, що ви ввели адресу, яку "
+"ви зареєстрували, і перевірте свою папку зі спамом."
+
+#: .\main\templates\password_reset\password_reset_form.html:5
+msgid "Forgot password"
+msgstr "Забули пароль"
+
+#: .\main\templates\password_reset\password_reset_form.html:25
+msgid "Submit"
+msgstr "Відправити"
+
+#: .\main\templates\password_reset\password_reset_subject.txt:3
+msgid "TestSite password reset"
+msgstr "TestSite скидання пароля"
+
+#: .\main\views.py:104
+msgid "Passing test at agefree"
+msgstr "Проходження тесту на agefree"
+
+#: .\main\views.py:105
+msgid "Congratulation, you have successfuly pass the test"
+msgstr "Вітаю, ви успішно склали іспит"
+
+#: .\main\views.py:340
+msgid "You have successfully added a user."
+msgstr "Ви успішно додали користувача."
+
+#: .\main\views.py:344
+msgid "You have successfully removed a user."
+msgstr "Ви успішно видалили користувача."
+
+#: .\main\views.py:374
+msgid "Thanks for registering {}. You are now logged in."
+msgstr "Дякую за реєстрацію {}. Ви тепер в системі."
+
+#: .\main\views.py:401
+msgid "Thank you for your email confirmation."
+msgstr "Дякую за підтвердження вашої електронної пошти."
+
+#: .\main\views.py:404 .\main\views.py:422
+msgid "Activation link is invalid!"
+msgstr "Посилання для активації недійсне!"
+
+#: .\main\views.py:419
+msgid "Thank you for your alt email confirmation."
+msgstr "Дякую за підтвердження вашої альтернативної поштової скриньки."
+
+#: .\main\views.py:482
+msgid "Sorry you don't have permission to access this file"
+msgstr "Вибачте, ви не маєте дозволу на доступ до цього файлу"
+
+#: .\main\views.py:563
+msgid "The email address associated with your account has not been verified."
+msgstr ""
+"Електронна адреса, пов'язана з вашим обліковим записом, не була підтверджена."
+
+#: .\templates\base_home.html:74 .\templates\base_home.html:77
+msgid "Personal office"
+msgstr "Особистий кабінет"
+
+#: .\templates\base_home.html:86
+msgid "View office"
+msgstr "Переглянути офіс"
+
+#: .\templates\base_home.html:97
+msgid "Edit password"
+msgstr "Редагувати пароль"
+
+#: .\templates\base_home.html:109 .\templates\base_home.html:254
+msgid "Add alt email"
+msgstr "Додати альтернативний email"
+
+#: .\templates\base_home.html:120
+msgid "Edit social links"
+msgstr "Редагувати посилання на соціальні мережі"
+
+#: .\templates\base_home.html:131
+msgid "Edit font size"
+msgstr "Редагувати розмір шрифта"
+
+#: .\templates\base_home.html:142 .\templates\base_home.html:371
+#: .\templates\base_home.html:376
+msgid "Additional settings"
+msgstr "Додаткові налаштування"
+
+#: .\templates\base_home.html:161
+msgid "Verify your primary email"
+msgstr "Підтвердьте свій основний email"
+
+#: .\templates\base_home.html:170 .\templates\base_home.html:172
+msgid "Exit"
+msgstr "Вихід"
+
+#: .\templates\base_home.html:236 .\templates\base_home.html:273
+#: .\templates\base_home.html:384
+msgid "Change"
+msgstr "Змінити"
+
+#: .\templates\base_home.html:263
+msgid "Your alternate email is verified"
+msgstr "Ваш альтернативний електронний лист підтверджено"
+
+#: .\templates\base_home.html:265
+msgid "Your alternate email is not verified"
+msgstr "Ваш альтернативний електронний лист не підтверджено"
+
+#: .\templates\base_home.html:294
+msgid "Social links"
+msgstr "Посилання на соціальні мережі"
+
+#: .\templates\base_home.html:340
+msgid "Font size"
+msgstr "Розмір шрифта"
+
+#: .\templates\base_home.html:345
+msgid "Small"
+msgstr "Маленький"
+
+#: .\templates\base_home.html:348
+msgid "Normal"
+msgstr "Звичайний"
+
+#: .\templates\base_home.html:351
+msgid "Large"
+msgstr "Великий"
+
+#: .\templates\base_home.html:405
+msgid "Invite new members to our site."
+msgstr "Запросіть нових користувачів на наш сайт."
+
+#: .\templates\base_home.html:410
+msgid "Send"
+msgstr "Відправити"
+
+#: .\templates\base_home.html:450
+msgid "Old password"
+msgstr "Старий пароль"
+
+msgid "Load page reports"
+msgstr "Завантажити сторінку звіту"
+
+msgid "Page report"
+msgstr "Звіт. Страници"
+
+msgid "Page object report"
+msgstr "Звіт. Елементи на сторінці"
+
+msgid "Page object type report"
+msgstr "Звіт. Тип елементу на сторінці"
+
+msgid "Diagnosis Type"
+msgstr "Діагностика. Тип"
+
+msgid "Measurement"
+msgstr "Діагностика. Отдиниці виміру"
+
+msgid "Diagnostics Parameter"
+msgstr "Діагностика. Параметри"
+
+msgid "Diagnostics Result"
+msgstr "Діагностика. Результати"
+
+msgid "Variants for parameter diagnostics"
+msgstr "Діагностика. Параметри варіанти"
+
+msgid "Tests"
+msgstr "Опитування"
+
+msgid "Variant"
+msgstr "Варіанти відповідей"
+
+msgid "Answer"
+msgstr "Відповіді"
+
+#~ msgid "invitation"
+#~ msgstr "запрошення"
+
+#~ msgid "Doctor"
+#~ msgstr "Лікар"
+
+#~ msgid "Add"
+#~ msgstr "Додати"
+
+#~ msgid "In your list"
+#~ msgstr "У вашому списку"
+
+#~ msgid "Remove"
+#~ msgstr "Прибрати"
+
+#~ msgid "No data available in table"
+#~ msgstr "Немає даних в таблиці"
+
+#~ msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+#~ msgstr "Показано від _START_ до _END_ з _TOTAL_ записів"
+
+#~ msgid "Showing 0 to 0 of 0 entries"
+#~ msgstr "Показано від 0 до 0 з 0 записів"
+
+#~ msgid "No matching records found"
+#~ msgstr "Не знайдено відповідних записів"
+
+#~ msgid "Show _MENU_ entries"
+#~ msgstr "Показати _MENU_ записів"
+
+#~ msgid "Loading..."
+#~ msgstr "Завантаження..."
+
+#~ msgid "Processing..."
+#~ msgstr "Працюємо..."
+
+#~ msgid "First"
+#~ msgstr "Перший"
+
+#~ msgid "Last"
+#~ msgstr "Останній"
+
+#~ msgid "Next"
+#~ msgstr "Далі"
+
+#~ msgid "Previous"
+#~ msgstr "Попередній"
+
+#~ msgid "Id"
+#~ msgstr "Id"
+
+#~ msgid "Registered"
+#~ msgstr "Зареєстровано"
+
+#~ msgid "Company"
+#~ msgstr "Компанія"
+
+#~ msgid "Name and surname"
+#~ msgstr "Ім'я та прізвище"
+
+#~ msgid "Human resource accounting"
+#~ msgstr "Кадровий облік"
+
+#~ msgid "Position"
+#~ msgstr "Посади"
+
+#~ msgid "Employees"
+#~ msgstr "Співробітники"
+
+#~ msgid "Mobile accounting"
+#~ msgstr "Облік мобільного зв'язку"
+
+#~ msgid "Access control system"
+#~ msgstr "Система контролю доступу"
+
+#~ msgid "Hello"
+#~ msgstr "Привіт"
+
+#~ msgid "Edit personal info"
+#~ msgstr "Редагувати особисту інформацію"
+
+#~ msgid "Edit qr"
+#~ msgstr "Редагувати qr"
+
+#~ msgid "Friends"
+#~ msgstr "Друзі"
+
+#~ msgid "Qr"
+#~ msgstr "Qr"
+
+#~ msgid "Code"
+#~ msgstr "Код"
+
+#~ msgid "Verify"
+#~ msgstr "Перевірка"
+
+#~ msgid "Log in"
+#~ msgstr "Увійти"
+
+#~ msgid "Otp token"
+#~ msgstr "Otp код"
+
+#~ msgid "QR Your code has been successfully configured."
+#~ msgstr "QR Ваш код був успішно налаштований."
+
+#~ msgid "QR Wrong code."
+#~ msgstr "QR Невірний код."
+
+#~ msgid "QR Wrong input."
+#~ msgstr "QR Неправильний ввід."
+
+#~ msgid "Statistic"
+#~ msgstr "Статистика"
+
+#~ msgid "History"
+#~ msgstr "Історія"
+
+#~ msgctxt "page title"
+#~ msgid "Login"
+#~ msgstr "Увійти"

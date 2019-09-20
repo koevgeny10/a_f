@@ -1,0 +1,101 @@
+{% extends 'base_home.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans "Diagnostic" %}
+{% endblock %}
+
+{% block addHead %}
+    {% load staticfiles %}
+    <link href="{% static 'css/profile.css' %}" rel="stylesheet">
+    {{ form_customer.media }}
+{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data" action="{% url "diagnostic:diagnostic" u diag %}" id="diagnostic">{% csrf_token %}
+</form>
+<form action="{% url 'diagnostic:reportview' u diag %}" method="post" id="generate">{% csrf_token %}
+</form>
+    <div class="row">
+        <ul class="nav nav-tabs nav-stacked col-lg-2">
+            <li class="active"><a data-toggle="tab" href="#Diagnostic">{% trans "Diagnostic" %}</a></li>
+            <li><a data-toggle="tab" href="#Uploadfiles">{% trans "Upload files" %}</a></li>
+            <li><a data-toggle="tab" href="#Reports">{% trans "Reports" %}</a></li>
+        </ul>
+
+            <div class="tab-content col-lg-10">
+            <!-- -->
+                <div id="Diagnostic" class="tab-pane fade in active">
+                    <ul class="nav nav-tabs">
+                        {% for i in diagnosticFormObjects %}
+                            {% if forloop.counter0 == 0 %}
+                                <li class="active">
+                            {% else %}
+                                <li>
+                            {% endif %}
+                        <a data-toggle="tab" href="#{{ forloop.counter0 }}">{{ i.type }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    <div class="tab-content">
+                        {% for i in diagnosticFormObjects %}
+                            {% if forloop.counter0 == 0 %}
+                        <div id="{{ forloop.counter0 }}" class="tab-pane fade in active">
+                            {% else %}
+                        <div id="{{ forloop.counter0 }}" class="tab-pane fade">
+                            {% endif %}
+
+                        {% for field in i %}
+                            <div class="row form-group">
+                                <p>
+                                <label class="col-lg-3" align="right" for="id_{{ field.html_name }}">{{ field.label }}:</label>
+                                {{ field }}
+                                </p>
+                            </div>
+                        {% endfor %}
+                        {% if i.type == 'Метаболограф' and image_url %}
+                            <img src="{{ image_url }}">
+                        {% endif %}
+                        </div>
+                        {% endfor %}
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <button form="diagnostic" class="btn btn-success" name="diagnostic" type="submit">{% trans "Save" %}</button>
+                        </div>
+                    </div>
+
+                    <div id="Uploadfiles" class="tab-pane fade">
+                        {{ uploadform }}
+                         <div class="row">
+                            <div class="col-lg-2"></div>
+                            <button form="diagnostic" class="btn btn-success" name="diagnostic" type="submit">{% trans "Save" %}</button>
+                        </div>
+                    </div>
+                <!-- -->
+                <!-- -->
+                    <div id="Reports" class="tab-pane fade">
+                        <div>
+                            <div class="row form-group">
+                                <label>Номер одной страници для генерации :</label><input form="generate" type="number" name="page_number">
+                            </div>
+                            <div class="row form-group">
+                                <label>Отобразить линейку :</label>
+                                <input form="generate" type="radio" name="show_ruller" value="0" checked> Нет
+                                <input form="generate" type="radio" name="show_ruller" value="1"> Да
+                            </div>
+                            <button form="generate" class="btn btn-success" type="submit" name="Load_page_reports">{% trans 'Load page reports' %}</button>
+                            <button form="generate" class="btn btn-success" type="submit" name="Load_reports">{% trans 'Load reports' %}</button>
+                        </div>
+                    </div>
+                </form>
+
+                </div>
+            </div>
+
+    </div>
+
+{% endblock %}

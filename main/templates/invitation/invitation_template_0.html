@@ -1,0 +1,12 @@
+{% autoescape off %}
+
+{% load i18n %}
+
+{% trans "Hi" %} {{ to_email }},
+{% trans "You were invited to join our website!" %}
+<br/>
+{% trans "From user" %} {{ from_user.username }}
+<br/>
+http://{{ domain }}
+
+{% endautoescape %}

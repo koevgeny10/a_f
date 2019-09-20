@@ -1,0 +1,122 @@
+{% extends 'base_home.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans "Home page" %}
+{% endblock %}
+
+{% block addHead %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center">
+    <h3>{% trans "Clients" %}</h3>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-md-6">
+        <p>{% trans 'User search by phone number' %}</p>
+    </div>
+    <div class="col-md-6">
+        <form method="GET" action="">
+            <div class="input-group">
+                <input class="form-control input-search" id="phoneSearch" type="text" name="q" placeholder="+38" value="{{ request.GET.q }}"/>
+                <span class="input-group-btn">
+                    <button title="{% trans 'Search' %}" type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                        {% if request.user.userprofile.user_settings_text_with_icons %}
+                            {% trans "Search" %}
+                        {% endif %}
+                    </button>
+                    <a title="{% trans 'Reset' %}" href="{% url 'home' %}">
+                        <button class="btn btn-default" type="button">
+                            <i class="fas fa-redo-alt"></i>
+                            {% if request.user.userprofile.user_settings_text_with_icons %}
+                                {% trans "Reset" %}
+                            {% endif %}
+                        </button>
+                    </a>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+<hr/>
+
+<div class="container">
+    <div class="col">
+        {% if user %}
+        <h1>{% trans 'Client has been found' %}</h1>
+
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-linkable scroll">
+                <thead>
+                    <tr>
+                        <th>{% trans 'Photo' %}</th>
+                        <th>{% trans 'Full name' %}</th>
+                        <th>{% trans 'Sex' %}</th>
+                        <th>{% trans 'Phone' %}</th>
+                        <th>{% trans 'Address' %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="clickable-row" data-href="{% url 'about_user' pk=user.pk %}">
+                        <td>
+                            <img src="{{ user.userprofile.user_photo.url }}" class="user-photo-style-table">
+                        </td>
+                        <td>
+                            {{ user.first_name }}
+                            {{ user.last_name }}
+                            {% if user.userprofile.user_full_name %}
+                                {{ user.userprofile.user_full_name }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if user.userprofile.sex %}
+                                {{ user.userprofile.get_sex_display }}
+                            {% else %}
+                                {% trans 'Not specified' %}
+                            {% endif %}
+                        </td>
+                        <td>
+                             {% if user.userprofile.phone %}
+                                 {{ user.userprofile.phone }}
+                             {% else %}
+                                 {% trans 'Not specified' %}
+                             {% endif %}
+                        </td>
+                        <td>
+                            {% if user.userprofile.address %}
+                                 {{ user.userprofile.address }}
+                             {% else %}
+                                 {% trans 'Not specified' %}
+                             {% endif %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% elif request.GET.q %}
+        <h1>{% trans 'Client has not been found' %}</h1>
+        {% endif %}
+
+    </div>
+</div>
+
+<script>
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+});
+
+jQuery(function($){
+    $("#phoneSearch").mask("+380 (99) 999-99-99");
+});
+</script>
+
+{% endblock %}

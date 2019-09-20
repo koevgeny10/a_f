@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+{% load staticfiles %}
+
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} {% endblock %}</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <!-- end here -->
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Slabo+27px" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    {% block addHead %}{% endblock %}
+</head>
+<body style="font-size: 150%;">
+
+<!-- Logo -->
+    <nav class="navbar navbar-default navbar-fixed-top sticky">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-left" href="{% url 'home' %}"><img src="{% static 'img/logo1.png' %}" height="55px;"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+
+
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.userprofile.role.id == 1 or user.userprofile.role.name == 'doctor' %}
+                    <li>
+                        <a title="{% trans 'Clients' %}" href="{% url 'home' %}">
+                            <i class="fas fa-users"></i>
+                            {% if request.user.userprofile.user_settings_text_with_icons %}
+                                {% trans 'Clients' %}
+                            {% endif %}
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                    <a title="{% trans 'Diagnostic' %}" href="{% url 'diagnostic:results' %}">
+                        <i class="fas fa-notes-medical"></i>
+                        {% if request.user.userprofile.user_settings_text_with_icons %}
+                            {% trans "Diagnostic" %}
+                        {% endif %}
+                    </a>
+                     </li>
+                {% endif %}
+
+                <li class="dropdown">
+                    <a title="{% trans 'Personal office' %}" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="{{ request.user.userprofile.user_photo.url }}" class="user-photo-style-dropdown">
+                        {% if request.user.userprofile.user_settings_text_with_icons %}
+                            {% trans "Personal office" %}
+                        {% endif %}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <li>
+                                <a href="{% url 'profile' %}">
+                                    <i class="fas fa-user-circle"></i>
+                                    {% trans "View office" %}
+                                </a>
+                            </li>
+                        </li>
+
+                        {% if not is_signin_social_network %}
+                            {% if custom_settings.password_edit_available %}
+                            <li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#EditPasswordModal">
+                                        <i class="fas fa-key"></i>
+                                        {% trans "Edit password" %}
+                                    </a>
+                                </li>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+
+                        {% if custom_settings.alternative_email_edit_available %}
+                        <li>
+                            <li>
+                                <a data-toggle="modal" data-target="#AddAltEmail">
+                                    <i class="fas fa-envelope"></i>
+                                    {% trans "Add alt email" %}
+                                </a>
+                            </li>
+                        </li>
+                        {% endif %}
+
+                        {% if custom_settings.social_links_edit_available %}
+                        <li>
+                            <li>
+                                <a data-toggle="modal" data-target="#EditSocialNetworks">
+                                    <i class="fas fa-share-square"></i>
+                                    {% trans "Edit social links" %}
+                                </a>
+                            </li>
+                        </li>
+                        {% endif %}
+
+                        {% if custom_settings.font_size_edit_available %}
+                        <li>
+                            <li>
+                                <a data-toggle="modal" data-target="#EditFontSize">
+                                    <i class="fas fa-font"></i>
+                                    {% trans "Edit font size" %}
+                                </a>
+                            </li>
+                        </li>
+                        {% endif %}
+
+                        {% if custom_settings.font_size_edit_available %}
+                        <li>
+                            <li>
+                                <a data-toggle="modal" data-target="#EditSettings">
+                                    <i class="fas fa-cogs"></i>
+                                    {% trans "Additional settings" %}
+                                </a>
+                            </li>
+                        </li>
+                        {% endif %}
+
+                        <li>
+                            <li>
+                                <a data-toggle="modal" data-target="#Invitation">
+                                    <i class="fas fa-hands-helping"></i>
+                                    {% trans "Invitation" %}
+                                </a>
+                            </li>
+                        </li>
+
+                        {% if not request.user.userprofile.additional_settings_available %}
+                        <li>
+                            <li>
+                                <form method="POST">{% csrf_token %}
+                                    <button class="btn btn-default btn-block" name="verifymainemail" type="submit">{% trans "Verify your primary email" %}</button>
+                                </form>
+                            </li>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </li>
+
+              <li>
+                  <a title="{% trans 'Exit' %}" href="{% url 'logout' %}">
+                      {% if request.user.userprofile.user_settings_text_with_icons %}
+                        {% trans "Exit" %}
+                      {% endif %}
+                      <i class="fas fa-sign-out-alt"></i>
+                  </a>
+              </li>
+              <li>
+                <!-- language section -->
+                <form action="{% url 'set_language' %}" method="post" class="navbar-form navbar-left"> {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" />
+                <select name="language" class="form-control" onchange="this.form.submit()">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% for lang in LANGUAGES %}
+                        <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                            {{ lang.1 }} ({{ lang.0 }})
+                        </option>
+                    {% endfor %}
+                </select>
+                </form>
+              </li>
+            </ul>
+
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+
+<div class="container-fluid">
+
+    <main role="main">
+        <div class="container">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </main>
+
+
+    <!-- modals here -->
+        {% if not is_signin_social_network %}
+            {% if custom_settings.password_edit_available %}
+            <!-- Edit password modal -->
+            <div id="EditPasswordModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <div class="modal-title">
+                                <h3>{% trans "Change password" %}</h3>
+                            </div>
+                        </div>
+                        <form method="POST">{% csrf_token %}
+                            <div class="modal-body">
+                                <h5>{% trans "Password" %}</h5>
+                                {{ form_password.old_password }}
+                                <br>
+                                {{ form_password.new_password1 }}
+                                <br>
+                                {{ form_password.new_password2 }}
+                                <br>
+                                <p>{{form_password.errors}}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" name="passwordedit" type="submit">{% trans "Change" %}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- end here -->
+            {% endif %}
+        {% endif %}
+
+        {% if custom_settings.alternative_email_edit_available %}
+        <!-- Add alt email modal -->
+        <div id="AddAltEmail" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-title">
+                            <h3>{% trans "Add alt email" %}</h3>
+                        </div>
+                    </div>
+                    <form method="POST">{% csrf_token %}
+                        <div class="modal-body">
+
+                            {{ form_alt_email.user_alternative_email }}
+
+                            {% if request.user.userprofile.user_alt_email_confirmed %}
+                            <p>{% trans "Your alternate email is verified" %} <i class="fas fa-check"></i></p>
+                            {% else %}
+                            <p>{% trans "Your alternate email is not verified" %} <i class="fas fa-times"></i></p>
+                            {% endif %}
+
+                            <hr>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success" name="altemailedit" type="submit">
+                                {% if request.user.userprofile.user_alt_email_confirmed %}
+                                    {% trans 'Change' %}
+                                {% else %}
+                                    {% trans 'Save' %}
+                                {% endif %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end here -->
+        {% endif %}
+
+        {% if custom_settings.social_links_edit_available %}
+        <!-- Edit social links modal -->
+        <div id="EditSocialNetworks" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-title">
+                            <h3>{% trans "Social links" %}</h3>
+                        </div>
+                    </div>
+                    <form method="POST">{% csrf_token %}
+                        <div class="modal-body">
+                            <p>Facebook {{ form_social_networks.user_facebook }}</p>
+                            <br>
+                            <p>Twitter {{ form_social_networks.user_twitter }}</p>
+                            <br>
+                            <p>Google+ {{ form_social_networks.user_google_plus }}</p>
+                            <br>
+                            <p>Github {{ form_social_networks.user_github }}</p>
+                            <br>
+                            <p>Linkedin {{ form_social_networks.user_linkedin }}</p>
+                            {% if form_social_networks.errors %}
+                                {% for field in form_social_networks %}
+                                    {% for error in field.errors %}
+                                        <strong>{{ error|escape }}</strong>
+                                    {% endfor %}
+                                {% endfor %}
+                                {% for error in form_social_networks.non_field_errors %}
+                                        <strong>{{ error|escape }}</strong>
+                                {% endfor %}
+                            {% endif %}
+                            <hr>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success" name="socialnetworksedit" type="submit">
+                                {% trans 'Save' %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end here -->
+        {% endif %}
+
+        {% if custom_settings.font_size_edit_available %}
+        <!-- Edit font size modal -->
+        <div id="EditFontSize" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-title">
+                            <h3>{% trans "Font size" %}</h3>
+                        </div>
+                    </div>
+                        <div class="modal-body">
+                            <button class="btn btn-sm btn-block js-font-decrease">
+                                {% trans 'Small' %}
+                            </button>
+                            <button class="btn btn-block js-font-normal">
+                                {% trans 'Normal' %}
+                            </button>
+                            <button class="btn btn-lg btn-block js-font-increase">
+                                {% trans 'Large' %}
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- end here -->
+        {% endif %}
+
+        {% if custom_settings.additional_settings_available %}
+        <!-- Edit settings modal -->
+        <div id="EditSettings" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-title">
+                            <h3>{% trans "Additional settings" %}</h3>
+                        </div>
+                    </div>
+                    <form method="POST">{% csrf_token %}
+                        <div class="modal-body">
+                            <h5>{% trans "Additional settings" %}</h5>
+                            <p>{{ form_user_settings.user_settings_text_with_icons }} {% trans "Text with icons" %}</p>
+                            <br>
+                            <p>{{ form_user_settings.user_settings_show_prompts }} {% trans "Show prompts" %}</p>
+                            <br>
+                            <p>{{form_user_settings.errors}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success" name="settingsedit" type="submit">{% trans "Change" %}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end here -->
+        {% endif %}
+
+        <!-- Invitation modal -->
+        <div id="Invitation" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-title">
+                            <h3>{% trans "Invitation" %}</h3>
+                        </div>
+                    </div>
+                    <form method="POST">{% csrf_token %}
+                        <div class="modal-body">
+                            <h5>{% trans "Invite new members to our site." %}</h5>
+                            <p>{{ form_invitation.to_user_email }}</p>
+                            <br>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success" name="invitation" type="submit">{% trans "Send" %}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end here -->
+
+
+     <!-- Django messages -->
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          {{ message }}
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                    {{ error }}
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if request.user.is_superuser %}
+    <!-- debug info -->
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Page load time
+        </button>
+        <div class="dropdown-menu">
+            <div id="debug"></div>
+        </div>
+    </div>
+    <!-- end here -->
+    {% endif %}
+
+<script>
+    // modals design
+    {% if not is_signin_social_network %}
+    document.getElementsByName('old_password')[0].placeholder='{% trans "Old password" %}';
+    document.getElementsByName('new_password1')[0].placeholder='{% trans "New password" %}';
+    document.getElementsByName('new_password2')[0].placeholder='{% trans "New password confirmation" %}';
+
+    document.getElementById("id_old_password").classList.add("form-control", "input-sm", "chat-input");
+    document.getElementById("id_new_password1").classList.add("form-control", "input-sm", "chat-input");
+    document.getElementById("id_new_password2").classList.add("form-control", "input-sm", "chat-input");
+    {% endif %}
+
+    document.getElementById("id_user_alternative_email").classList.add("form-control", "input-sm", "chat-input");
+
+    document.getElementById("id_to_user_email").classList.add("form-control", "input-sm", "chat-input");
+
+    document.getElementById("id_user_facebook").classList.add("form-control", "input-sm", "chat-input");
+    document.getElementsByName('user_facebook')[0].placeholder='https://www.facebook.com/';
+    document.getElementById("id_user_twitter").classList.add("form-control", "input-sm", "chat-input");
+    document.getElementsByName('user_twitter')[0].placeholder='https://twitter.com/';
+    document.getElementById("id_user_google_plus").classList.add("form-control", "input-sm", "chat-input");
+    document.getElementsByName('user_google_plus')[0].placeholder='https://plus.google.com/';
+    document.getElementById("id_user_github").classList.add("form-control", "input-sm", "chat-input");
+    document.getElementsByName('user_github')[0].placeholder='https://github.com/';
+    document.getElementById("id_user_linkedin").classList.add("form-control", "input-sm", "chat-input");
+    document.getElementsByName('user_linkedin')[0].placeholder='https://www.linkedin.com/';
+
+    // end here
+
+{% if request.user.is_superuser %}
+// debug here
+// page load time
+window.onload = function () {
+    var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+    console.log('Page load time is '+ (loadTime/1000) + ' seconds');
+    document.getElementById("debug").innerHTML = 'Page load time is '+ (loadTime/1000) + ' seconds';
+};
+//end here
+{% endif %}
+
+// font size
+(function($) {
+  function changeFont(fontSize) {
+      return function() {
+         $('body').css('font-size', fontSize + '%');
+         sessionStorage.setItem('fSize', fontSize);
+      }
+    }
+
+    var smallFont = changeFont(100),
+            mediumFont = changeFont(150),
+            largeFont  = changeFont(200);
+
+    $('.js-font-decrease').on('click', function(){
+      smallFont();
+    });
+
+    $('.js-font-normal').on('click', function(){
+      mediumFont();
+    });
+
+    $('.js-font-increase').on('click', function(){
+      largeFont();
+    });
+
+    if (sessionStorage.length !== 0) {
+      $('body').css('font-size', sessionStorage.getItem('fSize') + '%');
+    }
+
+})(jQuery);
+// end here
+
+</script>
+
+</div>
+
+
+</body>
+</html>

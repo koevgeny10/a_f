@@ -1,0 +1,9 @@
+{% autoescape off %}
+
+{% load i18n %}
+
+{% trans "Hi" %} {{ user.username }},
+{% trans "Please click on the link to confirm your alt email" %},
+http://{{ domain }}{% url 'activate_alt_email' uidb64=uid token=token email=email %}
+
+{% endautoescape %}

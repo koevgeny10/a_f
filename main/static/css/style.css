@@ -1,0 +1,250 @@
+@viewport {
+	zoom: 1.0;
+	width: extend-to-zoom;
+}
+
+@-ms-viewport {
+	zoom: 1.0;
+	width: extend-to-zoom;
+}
+
+@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+@media screen { 
+#rc-imageselect, .g-recaptcha {
+	transform:scale(0.75);
+	-webkit-transform:scale(0.75);
+	transform-origin:0 0;
+	-webkit-transform-origin:0 0;
+	margin: 0 auto;
+	} 
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    padding-top: 60px;
+    padding-right: 0 !important;
+}
+
+
+.g-recaptcha {
+	margin: 0 auto;
+    width: 230px;
+}
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+
+hr {
+    border-color: black;
+    background-color: black;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.custom-search {
+    margin-left: 0 !important;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0px;
+}
+/* end here */
+
+.alert-info {
+    background-color: #5bc0de; /* Blue */
+}
+
+.alert-success {
+    background-color: #5cb85c; /* Green */
+}
+
+.alert-warning {
+    background-color: #f0ad4e; /* Orange */
+}
+
+.alert-error {
+    background-color: #f44336; /* Red */
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* end here */
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+/* end here */
+
+/* user profile tabs */
+.tab {
+    height: 100%;
+    width: auto;
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.tab button { /* Style the buttons that are used to open the tab content */
+    display: block;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* end here */
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 122px;
+    width: 100%;
+    height: auto;
+}
+/* end here */
+
+/* user's profile info */
+.pre-scrollable{
+    max-height: 140px;
+    min-width: 150px;
+}
+
+.bd-callout-info {
+    border-left-color: #5bc0de !important;
+    overflow: auto;
+}
+
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    min-width: 200px;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}
+
+.user-photo-style {
+    margin-right:15px;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+.user-photo-style-table {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.user-photo-style-dropdown {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+
+
+.table-linkable tr:hover {
+    background-color: #c9e9fe !important;
+}
+
+.user-info-style {
+    margin:0 auto;
+}
+
+.user-social-style {
+    float:right;
+}
+/* end here */
+
+/* dropzone */
+.dropzone {
+    border: 2px dashed #0087F7;
+    border-radius: 5px;
+    background: #F3F4F5;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* end here */

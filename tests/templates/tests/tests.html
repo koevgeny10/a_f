@@ -1,0 +1,14 @@
+{% extends 'main/main_base.html' %}
+
+{% load index %}
+
+{% block body %}
+<form action="{% url 'tests:tests' %}" method="post">
+    {% csrf_token %}
+    {% for i in form %}
+        {{ questions|index:forloop.counter0 }}
+        {{ i }}
+    {% endfor %}
+    <input value="Next" name="submit" type="submit">
+</form>
+{% endblock %}

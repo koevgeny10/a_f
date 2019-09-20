@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans "Sign up" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-5">
+            <div class="form-login">
+                <h2>{% trans "Sign up" %}</h2>
+                <hr>
+                <form method="POST">{% csrf_token %}
+                    {% for element in form %}
+                        {{ element }}
+                    <br>
+                    {% endfor %}
+                    <input type="checkbox" required>
+                    {% trans "I agree with the contract of" %} <a href="{% url "oferta" %}">{% trans "public offer" %}</a>
+                <br>
+                <br>
+                    <div class="wrapper">
+                        <button type="submit" class="btn btn-primary btn-md">
+                            {% trans "Sign up" %} <i class="fas fa-user-plus"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

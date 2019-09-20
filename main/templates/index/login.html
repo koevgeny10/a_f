@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+    {% trans "Login" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-5">
+                <div class="form-login">
+                    <h2>{% trans "Login" %}</h2>
+                    <hr>
+                    <form method="POST">{% csrf_token %}
+
+                        {% for element in form %}
+                            {{ element }}
+                            <br>
+                        {% endfor %}
+                        <div class="wrapper">
+                            <label><input id="checkBox" type="checkbox" name="remember_me" checked/>{% trans "Remember me" %}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <ins><a href="{% url 'reset_password' %}">{% trans "Forgot password?" %}</a></ins><br>
+
+                            <button type="submit" class="btn btn-primary btn-md">{% trans "Login" %} <i class="fas fa-sign-in-alt"></i></button>
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="wrapper">
+                        <p><strong>{% trans "Or login with" %}</strong></p>
+                        <a href="{% url 'social:begin' 'google-oauth2' %}" title="Google+"><i class="fab fa-google-plus-square fa-3x"></i></a>&nbsp;
+                        <a href="{% url 'social:begin' 'github' %}" title="Github"><i class="fab fa-github-square fa-3x"></i></a>&nbsp;
+                        <a href="{% url 'social:begin' 'twitter' %}" title="Twitter"><i class="fab fa-twitter-square fa-3x"></i></a>&nbsp;
+                        <a href="{% url 'social:begin' 'facebook' %}" title="Facebook"><i class="fab fa-facebook-square fa-3x"></i></a>&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+{% endblock %}

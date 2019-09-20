@@ -1,0 +1,169 @@
+{% extends 'base_home.html' %}
+
+{% load i18n %}
+
+{% load index %}
+
+{% block title %}
+    {% trans "User" %}
+{% endblock %}
+
+{% block addHead %}
+    {% load staticfiles %}
+    <link href="{% static 'css/profile.css' %}" rel="stylesheet">
+    {{ form_customer.media }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+
+    <br>
+    <div id="Anket" class="tab-pane fade in active">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#aboutuser">{% trans "About client" %}</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#lifestyle">{% trans "Life style" %}</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#diseases">{% trans "Diseases" %}</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#motivation">{% trans "Motivation" %}</a>
+            </li>
+
+        </ul>
+
+        <form method="POST" action="{% url 'about_user' pk %}">{% csrf_token %}
+            <div class="tab-content">
+
+                <div id="aboutuser" class="tab-pane fade in active">
+                    <div class="bd-callout bd-callout-info">
+                        {% if user.userprofile.user_photo %}
+                            <img src="{{ user.userprofile.user_photo.url }}" class="user-photo-style">
+                        {% endif %}
+
+                        <div class="user-social-style">
+                            {% if user.usersocialnetworks.user_facebook %}
+                                <a href="{{ user.usersocialnetworks.user_facebook }}">
+                                    facebook
+                                    <i class="fab fa-facebook-square fa-1x"></i>
+                                </a> <br>
+                            {% endif %}
+
+                            {% if user.usersocialnetworks.user_twitter %}
+                                <a href="{{ user.usersocialnetworks.user_twitter }}">
+                                    twitter
+                                    <i class="fab fa-twitter-square fa-1x"></i>
+                                </a> <br>
+                            {% endif %}
+
+                            {% if user.usersocialnetworks.user_google_plus %}
+                                <a href="{{ user.usersocialnetworks.user_google_plus }}">
+                                    google+
+                                    <i class="fab fa-google-plus-square fa-1x"></i>
+                                </a> <br>
+                            {% endif %}
+
+                            {% if user.usersocialnetworks.user_github %}
+                                <a href="{{ user.usersocialnetworks.user_github }}">
+                                    github
+                                    <i class="fab fa-github-square fa-1x"></i>
+                                </a> <br>
+                            {% endif %}
+
+                            {% if user.usersocialnetworks.user_linkedin %}
+                                <a href="{{ user.usersocialnetworks.user_linkedin }}">
+                                    linkedin
+                                    <i class="fab fa-linkedin fa-1x"></i>
+                                </a> <br>
+                            {% endif %}
+                        </div>
+                        <div class="user-info-style">
+                            <p>{% trans "First name" %}: {{ user.first_name }}</p>
+                            <p>{% trans "Last name" %}: {{ user.last_name }}</p>
+                            <p>{% trans "Patronymic" %}: {{ user.userprofile.user_full_name }}</p>
+                            <p>{% trans "Phone number" %}: {{ user.userprofile.phone }}</p>
+                            <p>{% trans "Contact email" %}: {{ user.userprofile.user_contact_email }}</p>
+                            <p>{% trans "Sex" %}:
+                                {% if user.userprofile.sex %}
+                                    {{ user.userprofile.get_sex_display }}
+                                {% else %}
+                                    {% trans "Not specified" %}
+                                {% endif %}
+                            </p>
+                            <p>{% trans "Birthday" %}: {{ user.userprofile.birthday }}</p>
+                            <p>
+                                {% trans "Address of residence" %}:
+                                {% if user.userprofile.address %}
+                                    {{ user.userprofile.address }}
+                                {% else %}
+                                    {% trans "Not specified" %}
+                                {% endif %}
+                            </p>
+                        </div>
+                        <a href="{% url 'diagnostic:diagnostic' pk 'new'%}">
+                            <button class="btn btn-success" type="button">
+                                {% trans "New diagnostic" %}
+                            </button>
+                        </a>
+                        <a href="{% url 'diagnostic:generate' %}">
+                            <button class="btn btn-success" type="button">
+                                {% trans "Generate report" %}
+                            </button>
+                        </a>
+
+                    </div><br>
+                    {% if user.userprofile.about_user %}
+                    <p>{% trans "About user" %}</p>
+                    <div class="pre-scrollable">
+                            <p>{{ user.userprofile.about_user }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% for i in prev_diag %}
+                        <a class="row" href="{{ i.get_absolute_url }}">
+                            <button class="btn btn-default" type="button">
+                                {{ i }}
+                            </button>
+                        </a>
+
+                    {% endfor %}
+                </div>
+
+                <div id="lifestyle" class="tab-pane fade">
+                    {% for i in lifeStyleTest %}
+                        {{ questions1|index:forloop.counter0 }}
+                        {{ i }}
+                        <br>
+                    {% endfor %}
+                <button class="btn btn-success" name="test" type="submit">{% trans "Save" %}</button>
+                </div>
+
+                <div id="diseases" class="tab-pane fade">
+                        {% for i in diseasesTest %}
+                            {{ questions2|index:forloop.counter0 }}
+                            {{ i }}
+                            <br>
+                        {% endfor %}
+                <button class="btn btn-success" name="test" type="submit">{% trans "Save" %}</button>
+                </div>
+
+                <div id="motivation" class="tab-pane fade">
+                        {% for i in motivationTest %}
+                            {{ questions3|index:forloop.counter0 }}
+                            {{ i }}
+                            <br>
+                        {% endfor %}
+                <button class="btn btn-success" name="test" type="submit">{% trans "Save" %}</button>
+
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

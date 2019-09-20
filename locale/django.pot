@@ -1,0 +1,670 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-07 21:32+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:6
+#: .\diagnostics\templates\diagnostics\diagnostics.html:18
+#: .\templates\base_home.html:64 .\templates\base_home.html:67
+msgid "Diagnostic"
+msgstr ""
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:19
+msgid "Upload files"
+msgstr ""
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:20
+msgid "Reports"
+msgstr ""
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:59
+#: .\diagnostics\templates\diagnostics\diagnostics.html:67
+#: .\main\templates\index\about_user.html:142
+#: .\main\templates\index\about_user.html:151
+#: .\main\templates\index\about_user.html:160
+#: .\main\templates\index\profile.html:161 .\templates\base_home.html:275
+#: .\templates\base_home.html:322
+msgid "Save"
+msgstr ""
+
+#: .\diagnostics\templates\diagnostics\diagnostics.html:73
+msgid "Load reports"
+msgstr ""
+
+#: .\main\context_processors.py:70
+msgid "Your password has been successfully changed."
+msgstr ""
+
+#: .\main\context_processors.py:72 .\main\context_processors.py:86
+#: .\main\views.py:196 .\main\views.py:386 .\main\views.py:458
+msgid "Sorry, try again."
+msgstr ""
+
+#: .\main\context_processors.py:84
+msgid "Your settings have been successfully changed."
+msgstr ""
+
+#: .\main\context_processors.py:95
+msgid "Alternative email"
+msgstr ""
+
+#: .\main\context_processors.py:109 .\main\context_processors.py:142
+msgid "Check your verification code "
+msgstr ""
+
+#: .\main\context_processors.py:111
+msgid "Enter another email."
+msgstr ""
+
+#: .\main\context_processors.py:113
+msgid "You cannot enter this email."
+msgstr ""
+
+#: .\main\context_processors.py:119
+msgid "Done!"
+msgstr ""
+
+#: .\main\context_processors.py:126
+msgid "Wrong links."
+msgstr ""
+
+#: .\main\context_processors.py:130
+msgid "Confirmation email"
+msgstr ""
+
+#: .\main\context_processors.py:149
+msgid "This user already exists."
+msgstr ""
+
+#: .\main\context_processors.py:155 .\templates\base_home.html:152
+#: .\templates\base_home.html:400
+msgid "Invitation"
+msgstr ""
+
+#: .\main\context_processors.py:168
+msgid "Thank you for help!"
+msgstr ""
+
+#: .\main\context_processors.py:170
+msgid "Fail."
+msgstr ""
+
+#: .\main\forms.py:21 .\main\forms.py:51 .\main\models.py:179
+#: .\main\templates\password_reset\password_reset_form.html:34
+msgid "Email"
+msgstr ""
+
+#: .\main\forms.py:28 .\main\forms.py:72 .\templates\base_home.html:226
+msgid "Password"
+msgstr ""
+
+#: .\main\forms.py:58 .\main\templates\index\about_user.html:85
+#: .\main\templates\index\profile.html:38
+msgid "First name"
+msgstr ""
+
+#: .\main\forms.py:65 .\main\templates\index\about_user.html:86
+#: .\main\templates\index\profile.html:39
+msgid "Last name"
+msgstr ""
+
+#: .\main\forms.py:79
+msgid "Password confirmation"
+msgstr ""
+
+#: .\main\forms.py:115
+msgid "This email is already in use."
+msgstr ""
+
+#: .\main\forms.py:183
+msgid "Facebook link is not correct."
+msgstr ""
+
+#: .\main\forms.py:185
+msgid "Twitter link is not correct."
+msgstr ""
+
+#: .\main\forms.py:187
+msgid "Google+ link is not correct."
+msgstr ""
+
+#: .\main\forms.py:189
+msgid "Github link is not correct."
+msgstr ""
+
+#: .\main\forms.py:191
+msgid "Linkedin link is not correct."
+msgstr ""
+
+#: .\main\forms.py:202 .\main\models.py:184 .\main\templates\index\home.html:63
+msgid "Address"
+msgstr ""
+
+#: .\main\forms.py:204
+msgid "Wrong address"
+msgstr ""
+
+#: .\main\forms.py:207 .\main\models.py:185 .\main\templates\index\home.html:62
+msgid "Phone"
+msgstr ""
+
+#: .\main\forms.py:210
+msgid "User photo"
+msgstr ""
+
+#: .\main\forms.py:212
+msgid "Image files only"
+msgstr ""
+
+#: .\main\models.py:21
+msgid "Additional settings available"
+msgstr ""
+
+#: .\main\models.py:22
+msgid "Alt email edit available"
+msgstr ""
+
+#: .\main\models.py:23
+msgid "Font size edit available"
+msgstr ""
+
+#: .\main\models.py:24
+msgid "Password edit available"
+msgstr ""
+
+#: .\main\models.py:25
+msgid "Social links edit available"
+msgstr ""
+
+#: .\main\models.py:26
+msgid "Table buttons text available"
+msgstr ""
+
+#: .\main\models.py:28
+msgid "Active setting"
+msgstr ""
+
+#: .\main\models.py:48
+msgid "Role"
+msgstr ""
+
+#: .\main\models.py:66
+msgid "Club name"
+msgstr ""
+
+#: .\main\models.py:123
+msgid "E-mail of the invited user"
+msgstr ""
+
+#: .\main\models.py:147 .\main\templates\index\about_user.html:120
+#: .\main\templates\index\profile.html:44
+msgid "About user"
+msgstr ""
+
+#: .\main\models.py:149
+msgid "Alt email"
+msgstr ""
+
+#: .\main\models.py:152 .\main\templates\index\about_user.html:87
+#: .\main\templates\index\profile.html:40
+msgid "Patronymic"
+msgstr ""
+
+#: .\main\models.py:154 .\main\templates\index\about_user.html:89
+#: .\main\templates\index\profile.html:51
+msgid "Contact email"
+msgstr ""
+
+#: .\main\models.py:155
+msgid "Main email confirmed"
+msgstr ""
+
+#: .\main\models.py:156
+msgid "Alt email confirmed"
+msgstr ""
+
+#: .\main\models.py:164 .\main\templates\index\home.html:59
+#: .\main\templates\index\profile.html:43
+msgid "Photo"
+msgstr ""
+
+#: .\main\models.py:171
+msgid "Test is finished"
+msgstr ""
+
+#: .\main\models.py:175
+msgid "Male"
+msgstr ""
+
+#: .\main\models.py:176
+msgid "Female"
+msgstr ""
+
+#: .\main\models.py:180
+msgid "SMS"
+msgstr ""
+
+#: .\main\models.py:182 .\main\templates\index\about_user.html:90
+#: .\main\templates\index\home.html:61 .\main\templates\index\profile.html:41
+msgid "Sex"
+msgstr ""
+
+#: .\main\models.py:183 .\main\templates\index\about_user.html:97
+#: .\main\templates\index\profile.html:41
+msgid "Birthday"
+msgstr ""
+
+#: .\main\models.py:189
+msgid "Dispatch"
+msgstr ""
+
+#: .\main\models.py:193
+msgid "The user agrees to provide access to personal info"
+msgstr ""
+
+#: .\main\models.py:196 .\templates\base_home.html:377
+msgid "Text with icons"
+msgstr ""
+
+#: .\main\models.py:197 .\templates\base_home.html:379
+msgid "Show prompts"
+msgstr ""
+
+#: .\main\templates\activations\acc_active_alt_email.html:5
+#: .\main\templates\activations\acc_active_email.html:5
+#: .\main\templates\invitation\invitation_template_0.html:5
+msgid "Hi"
+msgstr ""
+
+#: .\main\templates\activations\acc_active_alt_email.html:6
+msgid "Please click on the link to confirm your alt email"
+msgstr ""
+
+#: .\main\templates\activations\acc_active_email.html:6
+msgid "Please click on the link to confirm your registration"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:8
+msgid "User"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:25
+msgid "About client"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:28
+#: .\main\templates\index\profile.html:122
+msgid "Life style"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:31
+#: .\main\templates\index\profile.html:125
+msgid "Diseases"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:34
+#: .\main\templates\index\profile.html:128
+msgid "Motivation"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:88
+#: .\main\templates\index\profile.html:48
+msgid "Phone number"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:94
+#: .\main\templates\index\about_user.html:103
+#: .\main\templates\index\home.html:82 .\main\templates\index\home.html:89
+#: .\main\templates\index\home.html:96
+msgid "Not specified"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:99
+#: .\main\templates\index\profile.html:45
+msgid "Address of residence"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:109
+msgid "New diagnostic"
+msgstr ""
+
+#: .\main\templates\index\about_user.html:114
+msgid "Generate report"
+msgstr ""
+
+#: .\main\templates\index\home.html:6
+msgid "Home page"
+msgstr ""
+
+#: .\main\templates\index\home.html:16 .\templates\base_home.html:55
+#: .\templates\base_home.html:58
+msgid "Clients"
+msgstr ""
+
+#: .\main\templates\index\home.html:22
+msgid "User search by phone number"
+msgstr ""
+
+#: .\main\templates\index\home.html:29 .\main\templates\index\home.html:32
+msgid "Search"
+msgstr ""
+
+#: .\main\templates\index\home.html:35 .\main\templates\index\home.html:39
+msgid "Reset"
+msgstr ""
+
+#: .\main\templates\index\home.html:53
+msgid "Client has been found"
+msgstr ""
+
+#: .\main\templates\index\home.html:60
+msgid "Full name"
+msgstr ""
+
+#: .\main\templates\index\home.html:104
+msgid "Client has not been found"
+msgstr ""
+
+#: .\main\templates\index\login.html:4 .\main\templates\index\login.html:13
+#: .\main\templates\index\login.html:25 .\templates\base.html:46
+msgid "Login"
+msgstr ""
+
+#: .\main\templates\index\login.html:22
+msgid "Remember me"
+msgstr ""
+
+#: .\main\templates\index\login.html:23
+#: .\main\templates\password_reset\password_reset_form.html:19
+msgid "Forgot password?"
+msgstr ""
+
+#: .\main\templates\index\login.html:30
+msgid "Or login with"
+msgstr ""
+
+#: .\main\templates\index\page.html:6 .\templates\base.html:52
+msgid "About"
+msgstr ""
+
+#: .\main\templates\index\page.html:10
+msgid "Lorem ipsum"
+msgstr ""
+
+#: .\main\templates\index\page.html:11
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+msgstr ""
+
+#: .\main\templates\index\profile.html:8 .\main\templates\index\profile.html:26
+#: .\main\templates\index\profile.html:34
+msgid "Profile"
+msgstr ""
+
+#: .\main\templates\index\profile.html:27
+msgid "Questionnaire"
+msgstr ""
+
+#: .\main\templates\index\profile.html:54
+msgid "I agree to receive information"
+msgstr ""
+
+#: .\main\templates\index\profile.html:55
+msgid "I agree to provide access to personal information"
+msgstr ""
+
+#: .\main\templates\index\profile.html:56
+msgid "Update profile"
+msgstr ""
+
+#: .\main\templates\index\profile.html:69
+msgid "Diagnostic graph"
+msgstr ""
+
+#: .\main\templates\index\sign_up.html:6 .\main\templates\index\sign_up.html:14
+#: .\main\templates\index\sign_up.html:27 .\templates\base.html:49
+msgid "Sign up"
+msgstr ""
+
+#: .\main\templates\index\sign_up.html:22
+msgid "I agree with the contract of"
+msgstr ""
+
+#: .\main\templates\index\sign_up.html:22
+msgid "public offer"
+msgstr ""
+
+#: .\main\templates\invitation\invitation_template_0.html:6
+msgid "You were invited to join our website!"
+msgstr ""
+
+#: .\main\templates\invitation\invitation_template_0.html:8
+msgid "From user"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_complete.html:4
+#: .\main\views.py:194
+msgid "Success!"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_complete.html:14
+msgid "Your password has been set. You may go ahead and"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_complete.html:14
+msgid "sign in"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_complete.html:14
+msgid "now."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:6
+#: .\main\templates\password_reset\password_reset_done.html:6
+msgid "Password reset"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:20
+#: .\main\templates\password_reset\password_reset_confirm.html:34
+#: .\templates\base_home.html:221
+msgid "Change password"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:28
+msgid "Your password can't be too similar to your other personal information."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:29
+msgid "Your password must contain at least 8 characters."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:30
+msgid "Your password can't be a commonly used password."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:31
+msgid "Your password can't be entirely numeric."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:43
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:44
+msgid "Please request a new password reset."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:48
+#: .\templates\base_home.html:451
+msgid "New password"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_confirm.html:49
+#: .\templates\base_home.html:452
+msgid "New password confirmation"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_done.html:17
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_done.html:18
+msgid "You should receive them shortly."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_done.html:21
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_form.html:5
+msgid "Forgot password"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_form.html:25
+msgid "Submit"
+msgstr ""
+
+#: .\main\templates\password_reset\password_reset_subject.txt:3
+msgid "TestSite password reset"
+msgstr ""
+
+#: .\main\views.py:104
+msgid "Passing test at agefree"
+msgstr ""
+
+#: .\main\views.py:105
+msgid "Congratulation, you have successfuly pass the test"
+msgstr ""
+
+#: .\main\views.py:340
+msgid "You have successfully added a user."
+msgstr ""
+
+#: .\main\views.py:344
+msgid "You have successfully removed a user."
+msgstr ""
+
+#: .\main\views.py:374
+msgid "Thanks for registering {}. You are now logged in."
+msgstr ""
+
+#: .\main\views.py:401
+msgid "Thank you for your email confirmation."
+msgstr ""
+
+#: .\main\views.py:404 .\main\views.py:422
+msgid "Activation link is invalid!"
+msgstr ""
+
+#: .\main\views.py:419
+msgid "Thank you for your alt email confirmation."
+msgstr ""
+
+#: .\main\views.py:482
+msgid "Sorry you don't have permission to access this file"
+msgstr ""
+
+#: .\main\views.py:563
+msgid "The email address associated with your account has not been verified."
+msgstr ""
+
+#: .\templates\base_home.html:74 .\templates\base_home.html:77
+msgid "Personal office"
+msgstr ""
+
+#: .\templates\base_home.html:86
+msgid "View office"
+msgstr ""
+
+#: .\templates\base_home.html:97
+msgid "Edit password"
+msgstr ""
+
+#: .\templates\base_home.html:109 .\templates\base_home.html:254
+msgid "Add alt email"
+msgstr ""
+
+#: .\templates\base_home.html:120
+msgid "Edit social links"
+msgstr ""
+
+#: .\templates\base_home.html:131
+msgid "Edit font size"
+msgstr ""
+
+#: .\templates\base_home.html:142 .\templates\base_home.html:371
+#: .\templates\base_home.html:376
+msgid "Additional settings"
+msgstr ""
+
+#: .\templates\base_home.html:161
+msgid "Verify your primary email"
+msgstr ""
+
+#: .\templates\base_home.html:170 .\templates\base_home.html:172
+msgid "Exit"
+msgstr ""
+
+#: .\templates\base_home.html:236 .\templates\base_home.html:273
+#: .\templates\base_home.html:384
+msgid "Change"
+msgstr ""
+
+#: .\templates\base_home.html:263
+msgid "Your alternate email is verified"
+msgstr ""
+
+#: .\templates\base_home.html:265
+msgid "Your alternate email is not verified"
+msgstr ""
+
+#: .\templates\base_home.html:294
+msgid "Social links"
+msgstr ""
+
+#: .\templates\base_home.html:340
+msgid "Font size"
+msgstr ""
+
+#: .\templates\base_home.html:345
+msgid "Small"
+msgstr ""
+
+#: .\templates\base_home.html:348
+msgid "Normal"
+msgstr ""
+
+#: .\templates\base_home.html:351
+msgid "Large"
+msgstr ""
+
+#: .\templates\base_home.html:405
+msgid "Invite new members to our site."
+msgstr ""
+
+#: .\templates\base_home.html:410
+msgid "Send"
+msgstr ""
+
+#: .\templates\base_home.html:450
+msgid "Old password"
+msgstr ""

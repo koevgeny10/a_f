@@ -1,0 +1,221 @@
+{% extends 'base_home.html' %}
+
+{% load i18n %}
+
+{% load index %}
+
+{% block title %}
+    {% trans "Profile" %}
+{% endblock %}
+
+{% block addHead %}
+    {% load staticfiles %}
+    <link href="{% static 'css/profile.css' %}" rel="stylesheet">
+    {{ form_customer.media }}
+{% endblock %}
+
+{% block content %}
+
+{% load staticfiles %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+<div class="container">
+    <div class="row">
+        <!-- tabs -->
+        <ul class="nav nav-tabs nav-stacked col-lg-2">
+            <li><a data-toggle="tab" href="#Profile">{% trans "Profile" %}</a></li>
+            <li class="active"><a data-toggle="tab" href="#Anket">{% trans "Questionnaire" %}</a></li>
+        </ul>
+        <div class="tab-content col-lg-10">
+            <!-- Profile -->
+            <div id="Profile" class="tab-pane fade">
+                <div>
+                    <div class="row">
+                        <h3>{% trans "Profile" %}</h3>
+                        <hr/>
+                        <div class="col-12 col-md-8">
+                            <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+                                <p>{% trans "First name" %}{{ form_username.first_name }}</p>
+                                <p>{% trans "Last name" %}{{ form_username.last_name }}</p>
+                                <p>{% trans "Patronymic" %} {{ form_customer.user_full_name }}</p>
+                                <p>{% trans "Sex" %} {{ form_customer.sex }} {% trans "Birthday" %} {{ form_customer.birthday }}</p>
+
+                                <p>{% trans "Photo" %} {{ form_customer.user_photo }}</p>
+                                <p>{% trans "About user" %} <br> {{ form_customer.about_user }}</p>
+                                <p>{% trans "Address of residence" %}{{ form_customer.address }}</p>
+                                <div class="form-group row">
+                                    <div class="col-xs-6">
+                                        {% trans "Phone number" %} {{ form_customer.phone }}
+                                    </div>
+                                    <div class="col-xs-6">
+                                        {% trans "Contact email" %} {{ form_customer.user_contact_email }}
+                                    </div>
+                                </div>
+                                <p>{% trans "I agree to receive information" %} {{ form_customer.dispatch }}</p>
+                                <p>{% trans "I agree to provide access to personal information" %} {{ form_customer.user_personal_info }}</p>
+                                <button class="btn btn-success pull-right" name="customform" type="submit">{% trans "Update profile" %}</button>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </form>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="bd-callout bd-callout-info">
+                                {% if user.userprofile.user_photo %}
+                                    <img src="{{ user.userprofile.user_photo.url }}" class="user-photo-style">
+                                {% endif %}
+                                <!-- diagnostic graph (reportlab) -->
+                                <div>
+                                    <a href="{% url 'user_graph' %}">{% trans 'Diagnostic graph' %}</a>
+                                </div>
+                                <!-- end here -->
+                                <div class="">
+                                    {% if user.usersocialnetworks.user_facebook %}
+                                        <a href="{{ user.usersocialnetworks.user_facebook }}">
+                                            facebook
+                                            <i class="fab fa-facebook-square fa-1x"></i>
+                                        </a>
+                                        <br>
+                                    {% endif %}
+                                    {% if user.usersocialnetworks.user_twitter %}
+                                        <a href="{{ user.usersocialnetworks.user_twitter }}">
+                                            twitter
+                                            <i class="fab fa-twitter-square fa-1x"></i>
+                                        </a>
+                                        <br>
+                                    {% endif %}
+
+                                    {% if user.usersocialnetworks.user_google_plus %}
+                                        <a href="{{ user.usersocialnetworks.user_google_plus }}">
+                                            google+
+                                            <i class="fab fa-google-plus-square fa-1x"></i>
+                                        </a> <br>
+                                    {% endif %}
+
+                                    {% if user.usersocialnetworks.user_github %}
+                                        <a href="{{ user.usersocialnetworks.user_github }}">
+                                            github
+                                            <i class="fab fa-github-square fa-1x"></i>
+                                        </a> <br>
+                                    {% endif %}
+
+                                    {% if user.usersocialnetworks.user_linkedin %}
+                                        <a href="{{ user.usersocialnetworks.user_linkedin }}">
+                                            linkedin
+                                            <i class="fab fa-linkedin fa-1x"></i>
+                                        </a> <br>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end Profile -->
+
+
+
+            <div id="Anket" class="tab-pane fade in active">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-toggle="tab" href="#lifestyle">{% trans "Life style" %}</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#diseases">{% trans "Diseases" %}</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#motivation">{% trans "Motivation" %}</a>
+                    </li>
+
+                </ul>
+
+                <form method="POST">{% csrf_token %}
+                    <div class="tab-content">
+
+                        <div id="lifestyle" class="tab-pane fade in active">
+                            {% for i in lifeStyleTest %}
+                                {{ questions1|index:forloop.counter0 }}
+                                {{ i }}
+                                <br>
+                            {% endfor %}
+                        </div>
+
+                        <div id="diseases" class="tab-pane fade">
+                                {% for i in diseasesTest %}
+                                    {{ questions2|index:forloop.counter0 }}
+                                    {{ i }}
+                                    <br>
+                                {% endfor %}
+                        </div>
+
+                        <div id="motivation" class="tab-pane fade">
+                                {% for i in motivationTest %}
+                                    {{ questions3|index:forloop.counter0 }}
+                                    {{ i }}
+                                    <br>
+                                {% endfor %}
+
+
+                        </div>
+                    <button class="btn btn-success" name="test" type="submit">{% trans "Save" %}</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</div>
+
+</div>
+
+<script>
+function openTab(tagName) {
+    var i, tabcontent;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    document.getElementById(tagName).style.display = "block";
+
+    localStorage.setItem("tag_name", tagName);
+
+}
+
+// customer form style
+document.getElementById("customer_about_user").classList.add("form-control", "chat-input");
+document.getElementById("customer_about_user").setAttribute("style", "resize:vertical; max-height:75px;");
+
+document.getElementById("customer_address").classList.add("form-control", "chat-input");
+
+document.getElementById("customer_sex").classList.add("selectpicker");
+document.getElementById("customer_sex").dataset.width = 'fit';
+
+document.getElementById("customer_phone").classList.add("form-control", "text-center");
+document.getElementById("customer_user_contact_email").classList.add("form-control", "text-center");
+
+document.getElementById("id_birthday_month").classList.add("selectpicker");
+document.getElementById("id_birthday_month").dataset.width = 'fit';
+document.getElementById("id_birthday_day").classList.add("selectpicker");
+document.getElementById("id_birthday_day").dataset.width = 'fit';
+document.getElementById("id_birthday_year").classList.add("selectpicker");
+document.getElementById("id_birthday_year").dataset.width = 'fit';
+
+document.getElementById("user_first_name").classList.add("form-control", "chat-input");
+document.getElementById("user_last_name").classList.add("form-control", "chat-input");
+document.getElementById("customer_user_full_name").classList.add("form-control", "chat-input");
+
+document.getElementById("customer_dispatch").classList.add("list-inline");
+// end here
+
+jQuery(function($){
+    $("#customer_phone").mask("+380 (99) 999-99-99");
+});
+</script>
+
+{% endblock %}
